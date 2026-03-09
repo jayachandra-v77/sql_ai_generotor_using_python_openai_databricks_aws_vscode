@@ -22,3 +22,11 @@ Question:
 SQL Query:
 """
 )
+
+
+def generate_sql(question):
+
+    chain = prompt | llm
+    response = chain.invoke({"question": question})
+
+    return response.content

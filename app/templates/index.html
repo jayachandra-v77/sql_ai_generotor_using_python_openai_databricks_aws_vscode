@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL AI Generator</title>
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#f4f6f8;
+            padding:40px;
+        }
+
+        .container{
+            width:600px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            font-size:16px;
+        }
+
+        .result{
+            margin-top:30px;
+            background:#f1f1f1;
+            padding:15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>SQL AI Generator</h1>
+
+<form method="POST" action="/ask">
+
+<label>Ask Question About Databricks Table</label>
+
+<input type="text" name="question" placeholder="Example: total sales by region">
+
+<button type="submit">Generate SQL</button>
+
+</form>
+
+
+{% if question %}
+
+<div class="result">
+
+<h3>Question</h3>
+<p>{{question}}</p>
+
+<h3>Generated SQL</h3>
+<p>{{sql_query}}</p>
+
+<h3>Result</h3>
+<p>{{result}}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
