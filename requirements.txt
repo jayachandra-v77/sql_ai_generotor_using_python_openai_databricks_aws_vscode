@@ -1,0 +1,7 @@
+flask
+openai
+langchain
+python-dotenv
+databricks-sql-connector
+langchain-community
+langchain-openai
