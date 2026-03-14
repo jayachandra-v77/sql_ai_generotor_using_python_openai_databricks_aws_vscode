@@ -1,7 +1,8 @@
-flask
-openai
 langchain
-python-dotenv
-databricks-sql-connector
-langchain-community
+fastapi
+uvicorn
 langchain-openai
+langchain-community
+databricks-sql-connector
+python-dotenv
+sqlalchemy
